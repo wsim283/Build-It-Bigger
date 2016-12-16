@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Build It Bigger.iml" filepath="$PROJECT_DIR$/Build It Bigger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Build-It-Bigger.iml" filepath="$PROJECT_DIR$/Build-It-Bigger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidjokesprovider/androidjokesprovider.iml" filepath="$PROJECT_DIR$/androidjokesprovider/androidjokesprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/javajokeslib/javajokeslib.iml" filepath="$PROJECT_DIR$/javajokeslib/javajokeslib.iml" />
     </modules>
