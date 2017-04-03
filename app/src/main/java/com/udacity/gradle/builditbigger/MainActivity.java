@@ -15,11 +15,13 @@ public class MainActivity extends AppCompatActivity implements OnFetchCompleteLi
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
+    MainActivityFragment mainActivityFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
     }
 
 
@@ -46,15 +48,16 @@ public class MainActivity extends AppCompatActivity implements OnFetchCompleteLi
     }
 
     public void tellJoke(View view) {
+        mainActivityFragment.showFetchLoadingBar();
         FetchJokeTask fetchJokesTask = new FetchJokeTask(this);
         fetchJokesTask.execute();
-
     }
 
 
     @Override
     public void fetchCompleted(String joke) {
 
+        mainActivityFragment.hideFetchLoadingBar();
         Intent jokeIntent = new Intent(MainActivity.this, JokeActivity.class);
         jokeIntent.putExtra(getString(R.string.joke_extra), joke);
         startActivity(jokeIntent);
