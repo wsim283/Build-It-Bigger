@@ -1,17 +1,18 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.free;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.androidjokesprovider.JokeActivity;
+import com.udacity.gradle.builditbigger.FetchJokeTask;
+import com.udacity.gradle.builditbigger.OnFetchCompleteListener;
+import com.udacity.gradle.builditbigger.R;
 
-
-public class MainActivity extends AppCompatActivity implements OnFetchCompleteListener{
+public class MainActivity extends AppCompatActivity implements OnFetchCompleteListener {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 

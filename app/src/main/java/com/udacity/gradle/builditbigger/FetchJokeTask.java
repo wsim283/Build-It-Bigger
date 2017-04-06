@@ -13,12 +13,12 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
 import java.io.IOException;
 
-class FetchJokeTask extends AsyncTask<Void,Void,String> {
+public class FetchJokeTask extends AsyncTask<Void,Void,String> {
 
     private JokeApi jokeApi = null;
     private OnFetchCompleteListener fetchCompleteListener;
 
-    FetchJokeTask(OnFetchCompleteListener fetchCompleteListener){
+    public FetchJokeTask(OnFetchCompleteListener fetchCompleteListener){
         initApi();
 
         this.fetchCompleteListener = fetchCompleteListener;
